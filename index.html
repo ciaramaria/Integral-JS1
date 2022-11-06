@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title >ANIDRAW !</title>
+  <!-- AGREGAMOS FAVICON (HACERLO AL FINAL DE LA CLASE) -->
+  <link rel="shortcut icon" href="./assets/img/logo.png">
+
+
+  <!-- AGREGAMOS PSEUDOELEMENTOS.CSS -->
+  <link rel="stylesheet" href="./assets/styles.css" />
+  <link rel="stylesheet" href="./assets/mediaqueries.css" />
+  <link rel="stylesheet" href="./assets/animation.css" />
+  <!-- AGREGAMOS CDN DE FONT-AWESOME -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+    integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+  <header>
+    <img src="./assets/img/logo.png" alt="Logo de Nucba NFT" class="logo" />
+    <nav class="navbar">
+      <div class="menu-label">
+        <img src="./assets/img/menu.png" alt="" class="menu-icon" />
+      </div>
+
+      <ul class="navbar-list">
+        <li><a class="navbar-link" href="#hero">Home</a></li>
+        <li><a class="navbar-link" href="#discover">Descubre</a></li>
+        <li><a class="navbar-link" href="#products">BTC</a></li>
+
+        <li>
+          <a href="https://www.youtube.com/c/Nucbaok" target="_blank">Youtube</a>
+        </li>
+        <li>
+          <a href="https://nucba.com.ar/" class="btn" target="_blank">Conocenos</a>
+        </li>
+      </ul>
+
+      <div class="cart-label">
+        <i class="fa-sharp fa-solid fa-cart-shopping cart-icon"></i>
+      </div>
+
+      <div class="cart">
+        <h2>Tus NFTs</h2>
+
+        <div class="cart-container"></div>
+
+        <span class="divider"></span>
+
+        <div class="cart-total">
+          <p>Total:</p>
+          <span class="total">0.00 ETH</span>
+        </div>
+        <button class="btn-buy">Comprar</button>
+        <button class="btn-delete">Vaciar carrito</button>
+      </div>
+
+      <div class="overlay"></div>
+    </nav>
+  </header>
+
+  <main>
+    <!-- hero -->
+    <section id="hero">
+      <div class="hero-info">
+        <h1>ANIDRAW !
+        </h1>
+        <p>
+          El mejor negocio virtual para comprar la mejor indumentaria.
+          Un cariño a los 90 pero en el siglo XXI.
+          Podrás encontrar todo tipo de indumentaria, bazar y muchas cosas
+          de los dibujos que mirabas de chico
+
+        
+        </p>
+        <a href="#info">Contactanos</a>
+      </div>
+
+      <div class="hero-card">
+        <img src="./assets/img/bannerCartoons.jpg" alt="BTC de ejemplo" />
+        </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- info -->
+    <section id="info">
+      <h2>Los mas solicitados</h2>
+      <div class="info-cards-container">
+        <div class="info-card">
+          <img src="./assets/img/info/info-icon.png" alt="Icono NFTs" />
+          <h3>Configura tu Wallet</h3>
+          <p>
+            Una vez que haya configurado la billetera de su elección,
+            conéctela a OpenSea.
+          </p>
+        </div>
+        <div class="info-card">
+          <img src="./assets/img/info/info-icon.png" alt="Icono NFTs" />
+          <h3>Agregá tus NFTs</h3>
+          <p>
+            Una vez que haya configurado la billetera de su elección, busca
+            los NFT de NUCBA y adquiere los que más te gusten.
+          </p>
+        </div>
+        <div class="info-card">
+          <img src="./assets/img/info/info-icon.png" alt="Icono NFTs" />
+          <h3>¡Coleccionalos!</h3>
+          <p>
+            A partir de ahora, formás parte de la comunidad de NUCBA NFT y vas
+            a poder acceder a contenidos educativos exclusivos sobre el mundo
+            crypto.
+          </p>
+        </div>
+      </div>
+    </section>
+    <!-- discover -->
+    <!-- <section id="discover"> -->
+      <!-- discover info text -->
+      <!-- <div class="discover-info">
+        <h2>Descubre una nueva era de colecciones</h2>
+        <div class="discover-text">
+          <p>
+            Tendras la oportunidad de coleccionar NFTs sobre distintos
+            tópicos, y de este modo acceder a beneficios exclusivos por tomar
+            parte de dicho club. Ej: "Team Star Wars"
+          </p>
+          <a href="#">Empezar ahora</a>
+        </div>
+      </div> -->
+
+      <!-- discover cards -->
+      <!-- <div class="discover-cards">
+        <img src="./assets/img/discover/darth-vader.png" alt="darth vader" />
+        <img src="./assets/img/discover/trooper.png" alt="trooper" />
+        <img src="./assets/img/discover/yoda.png" alt="yoda" />
+      </div>
+    </section> -->
+    <!-- products -->
+    <section id="products">
+      <h2>Elegi lo que queres!</h2>
+      <!-- categories -->
+      <div class="categories">
+        <button class="category active">Todas</button>
+        <button class="category" data-category="agenda">Agenda</button>
+        <button class="category" data-category="buzos">Buzos</button>
+        <button class="category" data-category="libros">Libros</button>
+        <button class="category" data-category="gorras">Gorras</button>
+        <button class="category" data-category="llaveros">Llaveros</button>
+        <button class="category" data-category="medias">Medias</button>
+        <button class="category" data-category="pantalones">Pantalones</button>
+        <button class="category" data-category="peliculas">Peliculas</button>
+        <button class="category" data-category="series">Series</button>
+        <button class="category" data-category="taza">Taza</button>
+        <button class="category" data-category="zapatillas">Zapatillas</button>
+    </div>
+
+      <!-- products -->
+      <div class="products-container"></div>
+      <button class="btn-load">Ver Más</button>
+    </section>
+  </main>
+  <footer>
+    <div>
+      <ul class="footer-links">
+        <li><a href="#">Términos de Uso</a></li>
+        <li><a href="#">Trabajá con Nosotros</a></li>
+        <li><a href="#">Soporte</a></li>
+      </ul>
+    </div>
+    <p>Realizado por © Ciaramaria Leandro </p>
+  </footer>
+  <div class="add-modal"></div>
+  <script src="./assets/data.js"></script>
+  <script src="./assets/index.js"></script>
+</body>
+
+</html>
