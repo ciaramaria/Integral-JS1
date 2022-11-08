@@ -29,7 +29,6 @@ const renderProduct = (product) => {
     return `
     <div class="product">
     <img src=${cardImg} alt=${name} />
-    <div class="product-info">
         <!-- top -->
         <div class="product-top">
             <h3>${name}</h3>
@@ -41,7 +40,7 @@ const renderProduct = (product) => {
                 data-id='${id}'
                 data-name='${name}'
                 data-bid='${price}'
-                data-img='${cardImg}'>Add</button>
+                data-img='${cardImg}'>AGREGAR</button>
             </div>
         </div>
     </div>
@@ -54,18 +53,115 @@ const renderDividedProducts = (index = 0) => {
 };
 
 
+const renderFilteredProducts = (category) => {
+    const productList = productsData.filter(
+        (product) => product.category === category
+        );
+
+    products.innerHTML = productList.map(renderProduct).join ('');
+}
+
 const renderProducts = (index = 0, category = undefined) => {
     if (!category) {
         renderDividedProducts(index);
         return;
     }
+    renderFilteredProducts(category);
+}
+
+const changeBtnActiveState = (selectedCategory) => {
+    const categories = [...categoriesList];
+    categories.forEach((categoryBtn) => {
+        if (categoryBtn.dataset.category !== selectedCategory) {
+        categoryBtn.classList.remove('active');
+        return;
+        }
+        categoryBtn.classList.add('active');
+    })
+};
+
+const changeShowMoreBtnState = category => {
+    if(!category){
+        btnLoad.classList.remove('hidden') 
+        return;
+    }
+    btnLoad.classList.add('hidden');
 }
 
 
+// cambios de estado btn, son dos arriba 
+const changeFilterState = (e) => {
+    const selectedCategory = e.target.dataset.category;
+    changeBtnActiveState(selectedCategory);
+    changeShowMoreBtnState(selectedCategory);
+};
 
+
+// filtro-principal 
+const applyFilter = (e) => {
+    if (!e.target.classList.contains('category')) return;
+    changeFilterState(e);
+    if (!e.target.dataset.category){
+        products.innerHTML = '';
+        renderProducts();
+    } else {
+        renderProducts(0, e.target.dataset.category);
+        productsController.nextProductsIndex = 1;
+    }
+};
+
+// true-false
+const isLastIndexOf = () => productsController.nextProductsIndex === productsController.productsLimit;
+
+// ver-más
+const showMoreProducts = () => {
+    renderProducts(productsController.nextProductsIndex);
+    productsController.nextProductsIndex++;
+    if (isLastIndexOf()) {
+      btnLoad.classList.add("hidden");
+    }
+  };
+
+// menu
+const toggleMenu = () => {
+    barsMenu.classList.toggle('open-menu');
+    if(cartMenu.classList.contains('open-cart')){
+        cartMenu.classList.remove('open-cart');
+        return;
+    }
+    overlay.classList.toggle('show-overlay');
+};
+
+const toggleCart = () => {
+    cartMenu.classList.toggle('open-cart');
+    if(barsMenu.classList.contains('open-menu')){
+        barsMenu.classList.remove('open-menu');
+        return;
+    }
+    overlay.classList.toggle('show-overlay');
+}
+
+const closeOnScroll = () => {
+    if(
+        !barsMenu.classList.contains('open-menu') &&
+        !cartMenu.classList.contains('open-cart')
+        ) 
+        return;
+        barsMenu.classList.remove('open-menu')
+        cartMenu.classList.remove('open-cart')
+        overlay.classList.remove('show-overlay')
+    }
+  
 
 const init = () => {
     renderProducts();
+    categories.addEventListener('click', applyFilter);
+    btnLoad.addEventListener('click', showMoreProducts);
+    cartBtn.addEventListener('click', toggleCart);
+    barsBtn.addEventListener('click', toggleMenu);
+    window.addEventListener('scroll', closeOnScroll);
+
+
 }
 
 init();

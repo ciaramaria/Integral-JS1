@@ -10,8 +10,8 @@ const productsData = [
     {
     id: 2,
     name: 'Buzo Jerry',
-    category: 'buzo',
     price: 8000,
+    category: 'buzo',
     cardImg: './assets/img/buzoJerry.jpg',
     },
     {
@@ -47,7 +47,7 @@ const productsData = [
     name: 'Gorra Coyote',
     category: 'gorra',
     price: 1500,
-    cardImg: './assets/img/gorraCoyote .jpg',
+    cardImg: './assets/img/gorraCoyote.jpg',
     },
     {
     id: 8,
@@ -68,7 +68,7 @@ const productsData = [
     name: 'Medias Coraje el Perro Cobarde',
     category: 'medias',
     price: 500,
-    cardImg: './assets/img/mediasCorajeElPerro.jpgg',
+    cardImg: './assets/img/mediasCorajeElPerro.jpg',
     },
     {
     id: 11,
@@ -161,7 +161,7 @@ const splitProducts = size => {
 const productsController = {
     dividedProducts : splitProducts(6),
     nextProductsIndex: 1,
-    productsLimitit: splitProducts(6).length,
+    productsLimit: splitProducts(6).length,
 };
 
 // console.log(productsController);
