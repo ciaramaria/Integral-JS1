@@ -23,19 +23,44 @@
   <div class="section-container">
       <div class="sign-up-form">
           <h1>Ingresá</h1>
-          <form>
-              <input type="email" class="input-box" placeholder="Tu email">
-              <input type="password" class="input-box" placeholder="Tu contraseña" required>
-              <p class="terminos"><input type="checkbox" required> Recordá esta cuenta</p>
-              <input type = "submit" value = "Enviar" class="button">
+          <form id="form">
+
+            
+            <div class="form__field">
+              <input 
+              type="email" 
+              id="email2"
+              class="input-box" 
+              placeholder="Tu correo electrónico">
+              <small></small>
+            </div>
+            <div class="form__field">
+              <input
+              id="password" 
+              type="password" 
+              class="input-box" 
+              placeholder="Tu contraseña" >
+              <small></small>
+            </div>
+              <p 
+              class="terminos">
+              <input 
+              type="checkbox" > Recordá esta cuenta</p>
+              <input 
+              type="submit"   
+              value = "Enviar" 
+              class="button">
               <hr>
-              <p class="registrate">No tenés cuenta? <a href="./registrar.html" target="_blank">Registrate</a></p>
+              <p 
+              class="registrate">No tenés cuenta? 
+              <a href="./registrar.html" 
+              target="_blank">Registrate</a></p>
   
           </form>
       </div>
   </div>
       
   
-  
+  <script src="./assets/validation.js"></script>
   </body>
 </html>

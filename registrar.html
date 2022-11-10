@@ -23,24 +23,71 @@
     <div class="section-container">
         <div class="sign-up-form">
             <h1>Registrate</h1>
-            <form>
-                <input type="name" class="input-box" placeholder="Tu nombre"required>
-                <input type="name" class="input-box" placeholder="Tu apellido"required>
-               <input type="email" class="input-box" placeholder="Tu correo electrónico"required>
-                <input type="password" class="input-box" placeholder="Tu contraseña" required>
-                <input type="password" class="input-box" placeholder="Confirmá tu contraseña" required>
-                <p class="terminos"><input type="checkbox" required> Acepto los términos y condiciones</p>
-                <input type = "submit" value = "Enviar" class="button">
+
+            <form id="form">
+                <div class="form__field">
+                <input 
+                type="name"  
+                id="username"
+                class="input-box" 
+                placeholder="Tu nombre">
+                <small></small>
+            </div>
+                <div class="form__field">
+                <input 
+                type="name"  
+                id="surname"
+                class="input-box" 
+                placeholder="Tu apellido">
+                <small></small>
+            </div>
+                <div class="form__field">
+                <input 
+               type="email" 
+               id="email"
+               class="input-box" 
+               placeholder="Tu correo electrónico">
+               <small></small>
+            </div>
+                <div class="form__field">
+            <input 
+                type="password"
+                id="password" 
+                class="input-box" 
+                placeholder="Tu contraseña" >
+                <small></small>
+            </div>
+                <div class="form__field">
+                <input 
+                type="password" 
+                id="password"
+                class="input-box" 
+                placeholder="Confirmá tu contraseña" 
+                required
+                >
+                <small></small>
+            </div>
+                <p 
+                class="terminos">
+                <input 
+                type="checkbox" 
+                required
+                > Acepto los términos y condiciones
+            </p>
+                <input 
+                type = "submit" 
+                value = "Enviar" 
+                class="button">
                 
                 
     
             </form>
     
-            </form>
+            
         </div>
     </div>
         
-    
+  <script src="./assets/validation.js"></script>
     
     </body>
 </html>
