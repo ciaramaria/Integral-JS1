@@ -378,14 +378,6 @@ main {
   font-size: 32px;
   font-weight: 800;
 }
-
-.info-cards-container {
-  display: flex;
-  justify-content: space-around;
-  align-items: flex-start;
-  flex-wrap: wrap;
-  gap: 20px;
-}
 .info-card {
   width: 300px;
   height: 290px;
@@ -396,6 +388,14 @@ main {
   text-align: center;
   background: var(--secondary);
   border-radius: 10px;
+  gap: 20px;
+}
+
+.info-cards-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  flex-wrap: wrap;
   gap: 20px;
 }
 
@@ -684,7 +684,7 @@ footer span {
 }
 
 .disabled {
-  background-color: var(--text-gray);
+  background-color: var(--fire);
   color: white;
   cursor: not-allowed;
   border: none;
@@ -783,7 +783,7 @@ width: 500px;
 max-width: 80%;
 height: 600px;
 /* background: #ffc7f909; */
-border-radius: .1rem;
+/* border-radius: .1rem; */
 text-align: center;
 display: flex;
 align-items: center;
@@ -804,8 +804,8 @@ text-shadow: 2px 2px 5px rgb(6, 3, 3);
 .input-box {
 border-radius: 5px;
 padding: 10px;
-margin: 10px;
-width: 80%;
+/* margin: 10px; */
+width: 95%;
 border: 1px solid #999;
 outline: none;
 color:rgb(59, 57, 57);
