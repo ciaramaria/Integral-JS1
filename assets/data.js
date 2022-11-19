@@ -34,7 +34,7 @@ const productsData = [
     },
     {
     id: 5,
-    name: 'Libro colorear Billy & Mandy',
+    name: 'Libro Billy & Mandy',
     category: 'libro',
     popular: false,
     price: 1200,
@@ -74,7 +74,7 @@ const productsData = [
     },
     {
     id: 10,
-    name: 'Medias Coraje el Perro Cobarde',
+    name: 'Medias Coraje el Perro',
     category: 'medias',
     popular: false,
     price: 500,
@@ -114,7 +114,7 @@ const productsData = [
     },
     {
     id: 15,
-    name: 'Serie Castores Cascarrabias',
+    name: 'Castores Cascarrabias',
     category: 'serie',
     popular: false,
     price: 1000,
@@ -146,7 +146,7 @@ const productsData = [
     },
     {
     id: 19,
-    name: 'Taza Coraje el Perro Cobarde',
+    name: 'Taza Coraje el Perro',
     category: 'taza',
     popular: false,
     price: 1500,
